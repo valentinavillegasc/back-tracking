@@ -1,14 +1,16 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_DEPLOY } = process.env;
 const modelBook = require("./models/modelBook");
 const modelTracker = require("./models/modelTracker");
 const modelUser = require("./models/modelUser");
 
-const database = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+/* const database = new Sequelize(
+  postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME},
   { logging: false, force: false }
-);
+); */
+
+const database = new Sequelize(DB_DEPLOY, { logging: false, force: false });
 
 modelBook(database);
 modelTracker(database);

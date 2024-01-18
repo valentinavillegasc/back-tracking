@@ -43,8 +43,8 @@ module.exports = (sequelize) => {
         defaultValue: [],
       },
       format: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        defaultValue: [],
+        type: DataTypes.STRING,
+        allowNull: true,
       },
       sinopsis: {
         type: DataTypes.TEXT,

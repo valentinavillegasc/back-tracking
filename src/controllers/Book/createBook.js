@@ -39,11 +39,11 @@ const createBook = async (
       pages,
       startDate,
       endDate,
-      gender,
+      gender: Array.isArray(gender) ? gender : [gender],
       format,
       sinopsis,
       review,
-      quotes,
+      quotes: Array.isArray(quotes) ? quotes : [quotes],
       stars,
       UserId,
     });

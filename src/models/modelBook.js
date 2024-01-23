@@ -38,7 +38,7 @@ module.exports = (sequelize) => {
         type: DataTypes.DATEONLY,
         allowNull: true,
       },
-      gender: {
+      genre: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         defaultValue: [],
       },

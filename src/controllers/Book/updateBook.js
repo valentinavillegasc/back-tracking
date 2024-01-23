@@ -9,7 +9,7 @@ const updateBook = async (
   pages,
   startDate,
   endDate,
-  gender,
+  genre,
   format,
   sinopsis,
   review,
@@ -38,7 +38,7 @@ const updateBook = async (
       book.startDate = startDate || book.startDate;
       book.endDate = endDate || book.endDate;
       book.format = format || book.format;
-      book.gender = Array.isArray(gender) ? gender : book.gender;
+      book.genre = Array.isArray(genre) ? genre : book.genre;
       book.quotes = Array.isArray(quotes) ? quotes : book.quotes;
 
       book.sinopsis = sinopsis || book.sinopsis;
